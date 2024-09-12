@@ -1,0 +1,142 @@
+/* Fuentes modernas */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(90, 110, 221, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #dad8d8;
+    font-weight: 700;
+}
+
+h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #5e5e5e;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction:row;
+    align-items:flex-start; 
+    flex-wrap: wrap;
+}
+form > div {
+    margin-bottom: 15px;
+    flex: 1 1 100%; /* Permite que los elementos del formulario ocupen el ancho disponible */
+    max-width: 100%; /* Evita que los elementos se estiren más allá de su contenedor */
+}
+label {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos para inputs y selects */
+input, select {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #ff8800;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilos específicos para el botón */
+button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    width: auto;
+    border: none;
+    border-radius: 8px;
+}
+.button-container {
+    flex: 1 1 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente dentro del contenedor */
+    margin-top: 20px;
+}
+button#convertButton {
+    padding: 10px 20px; /* Ajustar el padding para hacerlo más proporcionado */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;  /* Tamaño de texto moderado */
+    cursor: not-allowed;
+    transition: background-color 0.3s ease;
+    width: auto; /* Ajustar el ancho automáticamente según el contenido */
+    display: inline-block; /* Asegura que el botón sea del tamaño del texto */
+    text-align: center; /* Centrar el texto dentro del botón */
+    margin: 0 auto; /* Centra el botón horizontalmente si es necesario */
+}
+
+button#convertButton:enabled {
+    cursor: pointer;
+    background-color: #218838;
+}
+
+button#convertButton:hover:enabled {
+    background-color: #1e7e34;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #1e7e34;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#result.show {
+    opacity: 1;
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button#convertButton {
+        padding: 8px 16px; /* Ajuste de padding para pantallas más pequeñas */
+        font-size: 0.9rem;
+    }
+}
